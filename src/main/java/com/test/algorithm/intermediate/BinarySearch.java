@@ -6,5 +6,4 @@ package com.test.algorithm.intermediate;
 public class BinarySearch {
 
 
-
 }
