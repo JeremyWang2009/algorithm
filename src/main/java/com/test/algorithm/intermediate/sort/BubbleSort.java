@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 3.针对所有的元素做同样的步骤，除了最后一个
  * 4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一个数字需要比较.
  */
-public class Bubble {
+public class BubbleSort {
 
     /**
      * 从小到大排序
