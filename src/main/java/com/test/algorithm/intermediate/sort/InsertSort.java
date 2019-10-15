@@ -3,7 +3,8 @@ package com.test.algorithm.intermediate.sort;
 import java.util.Arrays;
 
 /**
- * Created by shanguang.wang on 18/7/21.
+ * @author jeremy.wang
+ * @date 2019-10-15
  * 插入排序：在一个已经有序的数组序列中，插入一个数，要求插入后数据序列仍然有序，算法适用于少量数据的排序.
  * 原理如下：
  * 1.默认第一个元素为有序序列
@@ -18,17 +19,17 @@ public class InsertSort {
      * 最小时间复杂度：O(n)
      * 算法稳定性：相邻的两个元素进行比较，交换也发生在这两个元素之间。所以，如果两个元素相等，不会交换
      */
-    public static int[] insertSort(int[] array){
-        if(array == null || array.length<2)
+    public static int[] insertSort(int[] array) {
+        if (array == null || array.length < 2)
             return array;
         int temp;
-        for(int i=1;i<array.length;i++){    // 从第二个元素开始遍历，排序
-            for(int j=i;j>0;j--){
-                if(array[j] < array[j-1]){
-                    temp = array[j-1];
-                    array[j-1] = array[j];
+        for (int i = 1; i < array.length; i++) {    // 从第二个元素开始遍历，排序
+            for (int j = i; j > 0; j--) {
+                if (array[j] < array[j - 1]) {
+                    temp = array[j - 1];
+                    array[j - 1] = array[j];
                     array[j] = temp;
-                }else{
+                } else {
                     break;  //已经排序序列，比第一个数大则无需遍历
                 }
             }
@@ -38,11 +39,11 @@ public class InsertSort {
 
 
     // test
-    public static void main(String[] args){
-        int[] array = {4,10,2,5,4,32,16,45,89,3,100,34,25,16,78,54,89};
+    public static void main(String[] args) {
+        int[] array = {4, 10, 2, 5, 4, 32, 16, 45, 89, 3, 100, 34, 25, 16, 78, 54, 89};
         array = insertSort(array);
-        Arrays.stream(array).forEach(num->{
-            System.out.print(num+" ");
+        Arrays.stream(array).forEach(num -> {
+            System.out.print(num + " ");
         });
     }
 }

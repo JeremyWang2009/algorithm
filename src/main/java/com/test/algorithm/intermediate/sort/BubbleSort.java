@@ -3,7 +3,8 @@ package com.test.algorithm.intermediate.sort;
 import java.util.Arrays;
 
 /**
- * Created by shanguang.wang on 18/7/14.
+ * @author jeremy.wang
+ * @date 2019-10-15
  * 冒泡排序：这个算法名字的由来是因为越来越大的元素会经由交换慢慢"浮"到数列的顶端，故名"冒泡排序"
  * 原理如下：
  * 1.比较相领的元素。如果第一个比第二个大，就交换他们两个
@@ -19,14 +20,14 @@ public class BubbleSort {
      * 最小时间复杂度：O(n)
      * 算法稳定性：相邻的两个元素进行比较，交换也发生在这两个元素之间。所以，如果两个元素相等，不会交换
      */
-    public static int[] bubble(int[] array){
+    public static int[] bubble(int[] array) {
         int temp = 0;
-        for(int i=0;i<array.length-1;i++){
-            for(int j=0;j<array.length-i-1;j++){
-                if(array[j]>array[j+1]){
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
                     temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
@@ -35,11 +36,11 @@ public class BubbleSort {
 
 
     // test
-    public static void main(String[] args){
-        int[] array = {4,10,2,5,4,32,16,45,89,3,100,34,25,16,78,54,89};
+    public static void main(String[] args) {
+        int[] array = {4, 10, 2, 5, 4, 32, 16, 45, 89, 3, 100, 34, 25, 16, 78, 54, 89};
         array = bubble(array);
-        Arrays.stream(array).forEach(num->{
-            System.out.print(num+" ");
+        Arrays.stream(array).forEach(num -> {
+            System.out.print(num + " ");
         });
     }
 }
