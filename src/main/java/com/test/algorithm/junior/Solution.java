@@ -3,6 +3,7 @@ package com.test.algorithm.junior;
 /**
  * @author jeremy.wang
  * @date 2019-10-15
+ * 一般算法解决方案
  */
 public class Solution {
 
